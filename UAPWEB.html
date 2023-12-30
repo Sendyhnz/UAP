@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hitung total harga</title>
+    <style></style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>kode</th>
+        <th>barang</th>
+        <th>harga</th>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>barang a</td>
+        <td id="hargabaranga">10.000</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>barang b</td>
+        <td id="hargabarangb">20.000</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>barang c</td>
+        <td id="hargabarangc">30.000</td>
+      </tr>
+    </table>
+
+    <div>
+      <form action="" onsubmit="total" ()>
+        <h1>inputan user</h1>
+        <label for="kodeinput">masukkan kode :</label>
+        <input type="text" id="kodeinput" /><br />
+        <label for="jumlahbarang">banyaknya barang :</label>
+        <input type="text" id="kodeinput" /><br />
+        <input type="submit" />
+      </form>
+    </div>
+
+    <script>
+      function total() {
+        let kode;
+        let kodeharga;
+        let jumlahtotal;
+        let totalharga;
+
+        kode = document.getElementById(kodeinput).value;
+        if (kode === "001") {
+          kodeharga = 10000;
+          jumlahtotal = document.getElementById("jumlahbarang").value;
+          totalharga = kodeharga * jumlahtotal;
+        } else if (kode === "002") {
+          kodeharga = 20000;
+          jumlahtotal = document.getElementById("jumlahbarang").value;
+          totalharga = kodeharga * jumlahtotal;
+        } else if (kode === "003") {
+          kodeharga = 30000;
+          jumlahtotal = document.getElementById("jumlahbarang").value;
+          totalharga = kodeharga * jumlahtotal;
+        }
+      }
+
+      window.alert("total pembayaran adalah : " + totalharga);
+      window.prompt("masukkan uang user : ");
+    </script>
+  </body>
+</html>
